@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        
+        <title>Working Woman 2021</title>
+        <meta name="description" content="Working Woman 2021" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" />
+        <link rel="manifest" href="manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="/assets/images/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Roboto CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Roboto', 'helvetica neue', Arial, sans-serif;
+                color: #1a2a3a;
+                font-size: 17px;
+                background: #fff;
+            }
+            header {
+                background: url(/assets/images/bg.jpg) #000 top right no-repeat;
+            }
+            header .container {
+                position: relative;
+            }
+            header a.claim {
+                display: none;
+                font-size: 14px;
+            }
+            header .social {
+                display: none;
+            }
+
+            .blue-line,
+            .red-line {
+                height: 10px;
+            }
+            .red-line.big {
+                height: 60px;
+            }
+            .blue-line {
+                background-color: #878787;
+            }
+            .red-line {
+                background-color: #E00664;
+            }
+            .text-red {
+                color: #E00664;
+            }
+
+            main {
+                padding: 50px 0 80px;
+            }
+            section {
+                visibility: visible;
+                opacity: 1;
+                transition: visibility 0s, opacity 0.5s linear;
+                height: auto;
+            }
+            section#ie11,
+            section#thanks,
+            section#thanks.hide,
+            section.hide,
+            .countdown.hide,
+            .ie11 section {
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+            }
+            section#thanks.show,
+            section.show,
+            .ie11 section#ie11 {
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+            }
+            .countdown {
+                background-color: #000;
+                color: #fff;
+                border-radius: 10px;
+                font-size: 1.4em;
+                text-align: center;
+                margin-bottom: 2em;
+                padding: 1em;
+            }
+            header .countdown {
+                position: absolute;
+                top: 20px;
+            }
+            main .countdown {
+                font-size: 1.3em;
+            }
+            #claim,
+            #thanks {
+                margin-bottom: 40px;
+            }
+            #claim p,
+            #thanks p,
+            #ie11 p {
+                padding: 20px 0;
+            }
+            #form .alert {
+                display: none;
+            }
+            #form.error .alert {
+                display: block;
+            }
+            button > .loading {
+                display: none;
+            }
+            button.loading > .quiet {
+                display: none;
+            }
+            button.loading > .loading {
+                display: block;
+            }
+            h1 {
+                text-transform: uppercase;
+                font-size: 2em;
+            }
+            h1 small {
+                color: #E00664;
+                text-transform: none;
+            }
+            h2,
+            h3 {
+                color: #fddb20;
+                font-weight: 900;
+            }
+            h2 {
+                text-align: center;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+            }
+            .custom-select {
+                width: auto;
+            }
+            label {
+                font-weight: 300;
+            }
+            @media (min-width: 576px) {
+                label {
+                    text-align: right;
+                }
+                label.form-check-label,
+                label.custom-control-label {
+                    text-align: left;
+                }
+            }
+            .btn {
+                padding: 0.2rem 0.75rem;
+                margin-top: 3px;
+            }
+            .btn-success {
+                background-image: linear-gradient(to bottom, #a0cc92 0%, #66ac60 60%);
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            .btn-success:hover {
+                background-image: linear-gradient(to bottom, #66ac60 0%, #55964f 60%);
+            }
+            .social {
+                list-style: none;
+            }
+            .social li {
+                display: inline;
+                margin-right: 40px;
+            }
+            footer {
+                background-color: #fff;
+                padding: 95px 0 35px;
+                position: relative;
+            }
+            footer .red-line {
+                position: absolute;
+                top: 5px;
+                width: 100%;
+            }
+            footer .container {
+                position: relative;
+            }
+            footer img {
+                max-width: 120px;
+            }
+            .logo {
+                position: absolute;
+                top: -110px;
+            }
+            .logo img {
+                max-width: 90px;
+            }
+            .legal {
+                position: relative;
+                left: 30%;
+                color: #000;
+                font-size: 0.9rem;
+                text-decoration: underline;
+            }
+            @media (min-width: 960px) {
+                header a.claim {
+                    position: absolute;
+                    bottom: 2.5rem;
+                    left: calc(50% - 48px);
+                    display: block;
+                    margin: 0 auto;
+                    color: #fff;
+                }
+                header a.claim:hover {
+                    color: #eee;
+                    text-decoration: none;
+                }
+                header a.claim::before {
+                    animation: bounce 1s ease infinite;
+                    bottom: -4rem;
+                    color: #fff;
+                    content: '╲╱';
+                    font-size: 1rem;
+                    height: 4.5rem;
+                    left: 50%;
+                    letter-spacing: -1px;
+                    line-height: 4rem;
+                    margin-left: -3rem;
+                    opacity: 0.8;
+                    position: absolute;
+                    text-align: center;
+                    width: 6rem;
+                }
+                header .social {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    display: block;
+                }
+                header .social li {
+                    margin-right: 20px;
+                }
+                header .social img {
+                    max-width: 30px;
+                }
+            }
+            @media (min-width: 576px) {
+                footer img {
+                    max-width: 100%;
+                }
+                .logo {
+                    position: absolute;
+                    top: -157px;
+                    left: calc(50% - 132px);
+                }
+                .logo img {
+                    max-width: 100%;
+                }
+            }
+
+            @keyframes bounce {
+                50% {
+                    transform: translateY(-20%);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+        </style>
+        <!-- <script src="//e00-apps-ue.uecdn.es/tms/js/tms-marca.js"></script> -->
+    </head>
+    <body>
+        <header>
+            <div class="container" style="padding: 0">
+                <!-- IFRAME PROD -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="660" height="371" src="https://www.youtube.com/embed/85MqjB3txtw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item"></iframe>
+                </div>
+                <!-- <img src="/assets/images/img-main.jpg?v1" alt="Working Woman 2021" class="img-fluid d-none d-md-block" />
+                <img src="/assets/images/img-main-mobile.jpg?v1" alt="Working Woman 2021" class="img-fluid d-block d-md-none" />
+                <div class="countdown d-none d-md-block">
+                    <small>16 de febrero de 2021 a las 18:00</small><br>
+                    <span></span>
+                </div> -->
+            </div>
+        </header>
+
+        <!-- <div class="blue-line"></div> -->
+        <div class="red-line"></div>
+
+        <main class="container">
+            <section id="ie11">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                        <h2>Navegador no Soportado</h2>
+                        <p class="text-center">Por favor, utiliza un navegador más moderno, por ejemplo, Edge, Chrome o Firefox.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="main">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3">
+                        <div class="countdown d-block d-md-none">
+                            <small>4 de marzo de 2021 a las 18:00</small><br>
+                            <span></span>
+                        </div>
+                        <h1>Working<br><strong>Woman</strong></h1>
+                        <p>
+                            Por quinto año consecutivo, con motivo del Día Internacional de la Mujer Trabajadora, te invitamos a celebrar con nosotr@s el "Working Woman Day". Será un edición especial en un año atípico marcado por la pandemia y en la que reuniremos a mujeres inspiradoras y referentes en diferentes esferas que compartirán con tod@s su experiencia.
+                        </p>
+                        <table style="margin:40px 0">
+                            <tbody>
+                                <tr>
+                                    <td width="23%" style="vertical-align:top;padding-right:10px"><strong>18.00</strong></td>
+                                    <td>
+                                        <h5 class="text-red">Conversaciones de:</h5>
+
+                                        <p><strong>Marta Michel</strong>, Directora. YO DONA </p>
+                                        <p>
+                                            Con:
+                                        </p>
+                                        <p><strong>Pilar Llop</strong>, Presidenta. SENADO
+
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td width="23%" style="vertical-align:top;padding-right:10px"><strong>18.20</strong></td>
+                                    <td>
+                                        <h5 class="text-red">Mesa redonda:</h5>
+                                        <h4 class="text-red">EL PAPEL DE LAS WORKING WOMAN DURANTE LA COVID 19</h4>
+
+                                        <h5>
+                                            Lista de invitadas:
+                                        </h5>
+                                        <p><strong>Hortensia Roig</strong>, Presidenta. EDEM</p>
+                                        <p><strong>Silvia Roldán</strong>, CEO. METRO MADRID</p>
+                                        <p><strong>Rosa Tous</strong>, Vicepresidenta Corporativa. TOUS</p>
+                                        <p><strong>Paula Ordovás</strong>, Fundadora. PEEPTOES COMUNICACION;
+                                            Socia Fundadora. MYPEEPTOESHOP;
+                                            Fundadora. BETTER NAKED CLUB;
+                                            Autora de “Come Bonito, Entrena Sexy” </p>
+                                            <p><strong>Sarah Chemouli</strong>, Directora. P&G IBERIA de la categoría cuidado del hogar y de la ropa</p>
+                                        <p><strong>Raquel Meroño</strong>, Actriz y empresaria</p>
+
+                                        <h5>
+                                            Modera:
+                                        </h5>
+                                        <p><strong>Marta Michel</strong>, Directora. YO DONA </p>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col" style="font-size: 1.3em">
+                                <i class="far fa-clock float-left fa-3x" style="margin-right: 2vh;"></i>
+                                <span class="text-red">4 de marzo de 2021<br>de 18:00 a 20:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="red-line big"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4" style="padding-top: 1.9vh">
+                        <a href="https://www.yodona.com/" target="_blank" rel="noopener nofollow"><img src="https://static.conferenciasyformacion.com/images/1523620799_yodona.svg" alt="Yo Dona" /></a>
+                    </div>
+                    <div class="col-4 text-center">
+                        <a href="https://es.pg.com/" target="_blank" rel="noopener"><img src="https://static.conferenciasyformacion.com/images/1614181307_procter-gamble-2018.png" alt="wueps" style="max-width:220px" /></a>
+                    </div>
+                    <div class="col-4 text-right">
+                        <a href="https://www.wueps.com/" target="_blank" rel="noopener"><img src="https://static.conferenciasyformacion.com/images/1614161125_wueps-logo.png" alt="wueps" style="max-width:220px" /></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="padding-top: 1.9vh">
+                        Colaboradores:
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="https://static.conferenciasyformacion.com/images/1614672023_ariel.jpg" alt="Ariel" />
+                    </div>
+                    <div class="col-2" style="padding-top: 1.9vh">
+                        <img src="https://static.conferenciasyformacion.com/images/1614672051_fairy.jpg" alt="Fairy" style="max-width:65px" />
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+        <!-- <script type="text/javascript" language="javascript" src="https://e00-ue.uecdn.es/cookies/js/policy_v3_utf8.js"></script>
+        <script type="text/javascript" src="https://sdk.privacy-center.org/loader.js" data-key="03f1af55-a479-4c1f-891a-7481345171ce" id="spcloader" async></script>
+        <script type="text/javascript" language="javascript" src="https://e00-ue.uecdn.es/cookies/js/gdpr_dfp.js"></script>
+        <script>
+            TMSBottom();
+        </script> -->
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Dec 14, 2020 18:00:00").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.querySelectorAll('.countdown span').forEach(function(el) {
+                el.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            });
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.querySelectorAll('.countdown').forEach(function(el) {
+                    this.classList.add('hide');
+                });
+            }
+            }, 1000);
+        </script>
+    </body>
+</html>
